@@ -12,7 +12,7 @@ var app = express();
 
 // await 
 mongoose.connect(
-  "mongodb://comp229:comp229007_2023M@svc.obaa.cloud:7017/midterm_db?authMechanism=DEFAULT&authSource=admin", {
+  "mongodb://localhost:27017/studentsDB", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }

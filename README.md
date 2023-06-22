@@ -12,7 +12,7 @@ This project is a simple Student Management System API that provides CRUD (Creat
 1. Clone the repository or download the source code:
 
    ```
-   git clone <repository-url>
+   git clone https://github.com/iamobaa/student-information-system.git
    ```
 
 2. Install the dependencies by running the following command in the project directory:
@@ -24,10 +24,10 @@ This project is a simple Student Management System API that provides CRUD (Creat
 3. Set up your MongoDB connection by modifying the `mongoose.connect()` line in `app.js`:
 
    ```javascript
-   mongoose.connect('mongodb://localhost:27017/studentsDB', {
-     useNewUrlParser: true,
-     useUnifiedTopology: true,
-   });
+        mongoose.connect('mongodb://localhost:27017/studentsDB', {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
    ```
 
    Replace `'mongodb://localhost:27017/studentsDB'` with your MongoDB connection string if necessary.
@@ -53,13 +53,19 @@ Example response:
   {
     "_id": "60cde28b82c7e738f8a7aae1",
     "name": "John Doe",
+    "major": "Science",
     "age": 20,
+    "createdDate": "2023-06-22T01:00:38.520Z",
+    "updatedDate": "2023-06-22T01:00:38.520Z",
     "__v": 0
   },
   {
     "_id": "60cde2b182c7e738f8a7aae2",
     "name": "Jane Smith",
-    "age": 22,
+    "major": "Arts",
+    "age": 20,
+    "createdDate": "2023-06-22T01:00:38.520Z",
+    "updatedDate": "2023-06-22T01:00:38.520Z",
     "__v": 0
   }
 ]
@@ -73,10 +79,13 @@ Example response:
 
 ```json
 {
-  "_id": "60cde28b82c7e738f8a7aae1",
-  "name": "John Doe",
-  "age": 20,
-  "__v": 0
+    "_id": "60cde28b82c7e738f8a7aae1",
+    "name": "John Doe",
+    "major": "Science",
+    "age": 20,
+    "createdDate": "2023-06-22T01:00:38.520Z",
+    "updatedDate": "2023-06-22T01:00:38.520Z",
+    "__v": 0
 }
 ```
 
@@ -88,8 +97,9 @@ Example request body:
 
 ```json
 {
-  "name": "Alice Brown",
-  "age": 21
+    "name": "Alice Brown",
+    "age": 21,
+    "major": "Science"
 }
 ```
 
@@ -97,10 +107,13 @@ Example response:
 
 ```json
 {
-  "_id": "60cde28b82c7e738f8a7aae3",
-  "name": "Alice Brown",
-  "age": 21,
-  "__v": 0
+    "_id": "64939d3a6341372401862119",
+    "name": "John Cena",
+    "major": "Science",
+    "age": 14,
+    "createdDate": "2023-06-22T01:00:38.520Z",
+    "updatedDate": "2023-06-22T01:00:38.520Z",
+    "__v": 0
 }
 ```
 
@@ -112,8 +125,13 @@ Example request body:
 
 ```json
 {
-  "name": "Alice Green",
-  "age": 22
+    "_id": "64939d3a6341372401862119",
+    "name": "Jane Cena",
+    "major": "Arts",
+    "age": 22,
+    "createdDate": "2023-06-22T01:00:38.520Z",
+    "updatedDate": "2023-06-22T01:00:38.520Z",
+    "__v": 0
 }
 ```
 

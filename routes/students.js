@@ -16,8 +16,8 @@ router.get('/', async (req, res) => {
 
 // POST /students: Add a new student
 router.post('/', async (req, res) => {
-  const { name, age } = req.body;
-  const student = new Student({ name, age });
+  const { name, age, major } = req.body;
+  const student = new Student({ name, age, major });
 
   try {
     const newStudent = await student.save();
@@ -30,7 +30,8 @@ router.post('/', async (req, res) => {
 // GET /students/:id: Fetch a single student by id
 router.get('/:id', async (req, res) => {
   try {
-    const student = await Student.findById(req.params.id);
+    const id = req.params.id;
+    const student = await Student.findById(id);
     if (student) {
       res.json(student);
     } else {
